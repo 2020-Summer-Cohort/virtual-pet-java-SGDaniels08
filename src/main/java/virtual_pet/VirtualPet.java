@@ -19,27 +19,30 @@ public class VirtualPet {
 
     public void eats() {
         attributeHunger -= 50;
-        tick();
+        if (attributeHunger<0) {
+            attributeHunger = 0;
+        }
     }
 
     public void drinks() {
         attributeThirst -= 50;
-        tick();
+        if (attributeThirst<0) {
+            attributeThirst = 0;
+        }
     }
 
     public void plays() {
         attributeBoredom -= 40;
-        tick();
+        if (attributeBoredom<0) {
+            attributeBoredom = 0;
+        }
     }
 
     public void sleeps() {
-        // Reversed order of attribute change + tick() deliberate
-        tick();
         attributeSleepiness = 0;
     }
 
     public void potties() {
         attributeBathroom = 0;
-        tick();
     }
 }

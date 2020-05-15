@@ -59,21 +59,21 @@ public class VirtualPetTest {
     public void testEats() {
         VirtualPet testPet = new VirtualPet();
         testPet.eats();
-        assertEquals(5, testPet.attributeHunger);
+        assertEquals(0, testPet.attributeHunger);
     }
 
     @Test
     public void testDrinks() {
         VirtualPet testPet = new VirtualPet();
         testPet.drinks();
-        assertEquals(10, testPet.attributeThirst);
+        assertEquals(0, testPet.attributeThirst);
     }
 
     @Test
     public void testPlays() {
         VirtualPet testPet = new VirtualPet();
         testPet.plays();
-        assertEquals(20, testPet.attributeBoredom);
+        assertEquals(10, testPet.attributeBoredom);
     }
 
     @Test
@@ -87,6 +87,51 @@ public class VirtualPetTest {
     public void testPotties() {
         VirtualPet testPet = new VirtualPet();
         testPet.potties();
-        assertEquals(5, testPet.attributeBathroom);
+        assertEquals(0, testPet.attributeBathroom);
+    }
+
+    @Test
+    public void threeEatsZeroHunger() {
+        VirtualPet testPet = new VirtualPet();
+        testPet.eats();
+        testPet.eats();
+        testPet.eats();
+        assertEquals(0, testPet.attributeHunger);
+    }
+
+    @Test
+    public void threeDrinksZeroThirst() {
+        VirtualPet testPet = new VirtualPet();
+        testPet.drinks();
+        testPet.drinks();
+        testPet.drinks();
+        assertEquals(0, testPet.attributeThirst);
+    }
+
+    @Test
+    public void threePlaysZeroBoredom() {
+        VirtualPet testPet = new VirtualPet();
+        testPet.plays();
+        testPet.plays();
+        testPet.plays();
+        assertEquals(0, testPet.attributeBoredom);
+    }
+
+    @Test
+    public void threeSleepsZeroSleepiness() {
+        VirtualPet testPet = new VirtualPet();
+        testPet.sleeps();
+        testPet.sleeps();
+        testPet.sleeps();
+        assertEquals(0, testPet.attributeSleepiness);
+    }
+
+    @Test
+    public void threePottiesZeroBathroom() {
+        VirtualPet testPet = new VirtualPet();
+        testPet.potties();
+        testPet.potties();
+        testPet.potties();
+        assertEquals(0, testPet.attributeBathroom);
     }
 }

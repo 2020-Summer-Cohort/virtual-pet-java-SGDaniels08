@@ -11,9 +11,10 @@ public class VirtualPetApplication {
         VirtualPet gamePet = new VirtualPet();
 
         while (true) {
+            gamePet.tick();
             System.out.println(gamePet.name);
             System.out.println("");
-            showAttributes(gamePet);
+            showVirtualPet(gamePet);
             System.out.println("");
 
             System.out.println("How would you like to interact with " + gamePet.name + "?");
@@ -29,14 +30,11 @@ public class VirtualPetApplication {
             else if (gameChoice == 3) {gamePet.plays();}
             else if (gameChoice == 4) {gamePet.sleeps();}
             else if (gameChoice == 5) {gamePet.potties();}
-            else {
-                gamePet.tick();
-                System.out.println("Well, that was a waste of time.");
-            }
+            else {System.out.println("Well, that was a waste of time.");}
         }
     }
 
-    public static void showAttributes(VirtualPet showPet) {
+    public static void showVirtualPet(VirtualPet showPet) {
         System.out.println("** Attributes **");
         System.out.println("Hunger:" + showPet.attributeHunger);
         System.out.println("Thirst:" + showPet.attributeThirst);
