@@ -8,6 +8,7 @@ See the HELP.md for assignment directions and guide.
 +++ Added methods (.eats() , .drinks(), .plays() , .sleeps() , .potties())
     --> Methods change attributes in different ways 
 +++ Added tick() action to every action method
++++ Functional game loop
 
 Ideas:
 @@ adjust rate at which needs change based on virtual pet / circumstance
