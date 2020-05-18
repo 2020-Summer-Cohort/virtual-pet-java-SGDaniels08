@@ -7,6 +7,7 @@ public class VirtualPet {
     int attributeBoredom = 50;
     int attributeSleepiness = 50;
     int attributeBathroom = 50;
+    int attributeAggression = 25;
 
     public void tick() {
 
@@ -15,6 +16,9 @@ public class VirtualPet {
         attributeBoredom += 10;
         attributeSleepiness += 5;
         attributeBathroom += 5;
+        attributeAggression++;
+
+        attributeCheck();
     }
 
     public void eats() {
@@ -44,5 +48,13 @@ public class VirtualPet {
 
     public void potties() {
         attributeBathroom = 0;
+    }
+
+    public void attributeCheck() {
+        if (attributeHunger >= 100) {attributeAggression += 20;}
+        if (attributeThirst >= 100) {attributeAggression += 10;}
+        if (attributeBoredom >= 100) {attributeAggression += 10;}
+        if (attributeSleepiness >= 100) {attributeAggression += 10;}
+        if (attributeBathroom >= 100) {attributeAggression += 20;}
     }
 }

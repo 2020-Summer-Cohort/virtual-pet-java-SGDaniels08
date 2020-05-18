@@ -31,6 +31,12 @@ public class VirtualPetApplication {
             else if (gameChoice == 4) {gamePet.sleeps();}
             else if (gameChoice == 5) {gamePet.potties();}
             else {System.out.println("Well, that was a waste of time.");}
+
+            if (gamePet.attributeAggression >= 100) {
+                System.out.println("Whoops! You made " + gamePet.name + " angry.");
+                System.out.println("You have been eaten. Thank you for trying Virtual Pet!");
+                break;
+            }
         }
     }
 
@@ -41,6 +47,7 @@ public class VirtualPetApplication {
         System.out.println("Boredom:" + showPet.attributeBoredom);
         System.out.println("Sleepiness:" + showPet.attributeSleepiness);
         System.out.println("Bathroom:" + showPet.attributeBathroom);
+        System.out.println("Aggression: " + showPet.attributeAggression);
     }
 
     public static void showOptions() {

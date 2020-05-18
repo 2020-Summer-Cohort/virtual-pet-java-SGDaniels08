@@ -134,4 +134,45 @@ public class VirtualPetTest {
         testPet.potties();
         assertEquals(0, testPet.attributeBathroom);
     }
+
+    @Test
+    public void hungerOver100RaiseAggression20() {
+        VirtualPet testPet = new VirtualPet();
+        testPet.attributeHunger = 100;
+        testPet.attributeCheck();
+        assertEquals(45, testPet.attributeAggression);
+    }
+
+    @Test
+    public void thirstOver100RaiseAggression10() {
+        VirtualPet testPet = new VirtualPet();
+        testPet.attributeThirst = 100;
+        testPet.attributeCheck();
+        assertEquals(35, testPet.attributeAggression);
+    }
+
+    @Test
+    public void boredomOver100RaiseAggression10() {
+        VirtualPet testPet = new VirtualPet();
+        testPet.attributeBoredom = 100;
+        testPet.attributeCheck();
+        assertEquals(35, testPet.attributeAggression);
+    }
+
+    @Test
+    public void sleepinessOver100RaiseAggression10() {
+        VirtualPet testPet = new VirtualPet();
+        testPet.attributeSleepiness = 100;
+        testPet.attributeCheck();
+        assertEquals(35, testPet.attributeAggression);
+    }
+
+    @Test
+    public void bathroomOver100RaiseAggression20() {
+        VirtualPet testPet = new VirtualPet();
+        testPet.attributeBathroom = 100;
+        testPet.attributeCheck();
+        assertEquals(45, testPet.attributeAggression);
+    }
 }
+

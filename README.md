@@ -9,7 +9,8 @@ See the HELP.md for assignment directions and guide.
     --> Methods change attributes in different ways 
 +++ Added tick() action to every action method
 +++ Functional game loop
++++ if attribute reaches 100, increase aggression
+    --> aggression > 100, game over
 
 Ideas:
 @@ adjust rate at which needs change based on virtual pet / circumstance
-@@ if too many attributes get too high, pet attacks / game over <-- attributeAggression
